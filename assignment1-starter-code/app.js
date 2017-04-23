@@ -18,23 +18,15 @@ LunchCheckController.$inject = ['$scope'];
 
     $scope.check = function() {
 
-      $scope.message = messageForDishes($scope.dishes);
-
-     // $scope.messageClass = classForMessage($scope.dishes);
-
-      //$scope.inputClass = classForInput($scope.dishes);
-
+      $scope.message = getmessage($scope.dishes);
     };
  
 
 
 $scope.reset = function() {
 
-      $scope.inputClass = "";
-
       $scope.message = "";
 
-      $scope.messageClass = "text-success";
 
     }
 
@@ -42,7 +34,7 @@ $scope.reset = function() {
 }
 
 
-  function messageForDishes(dishes) {
+  function getmessage(dishes) {
 
     if (dishes.trim() == "") {
 
