@@ -36,7 +36,7 @@
      <ol>
         <li ng-repeat="item in buylist.items">
           Buy {{ item.quantity }} of {{ item.name }}
-          <button ng-click="buylist.removeItem($index);">Remove Item</button>
+          <button ng-click="buylist.removeItem($index);">Bought Item</button>
         </li>
       </ol>
      <div class="emptyMessage" ng-if="!buylist.items[0]">Everything is bought!</div>
